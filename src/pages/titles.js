@@ -1,16 +1,17 @@
 import * as React from "react";
-import { titles, heading, step, subheading,} from "./layout.module.css";
+import { titles, heading, step, subheading } from "./layout.module.css";
 
-const Titles = () => {
+const Titles = ({ data }) => {
+  const step_text = data.allContentstackTPages.nodes[0].step_text;
+  const heading_text = data.allContentstackTPages.nodes[0].heading;
+  const subheading_text = data.allContentstackTPages.nodes[0].subheading;
   return (
     <div className={titles}>
       <div className={step}>
-         <span> Step 1 of 4</span>
+        <span>{step_text}</span>
       </div>
-      <p className={heading}>Sign up for a closer look</p>
-      <p className={subheading}>
-        Enjoy more expert insight and analysis from your favourite journalists
-      </p>
+      <p className={heading}>{heading_text}</p>
+      <p className={subheading}>{subheading_text}</p>
     </div>
   );
 };

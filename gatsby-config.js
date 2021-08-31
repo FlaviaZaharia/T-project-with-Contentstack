@@ -12,13 +12,13 @@ module.exports = {
     title: "T-project-with-Contentstack",
   },
   plugins: [
-    // {
-    //   resolve: "gatsby-source-contentstack",
-    //   options: {
-    //     api_key: CONTENTSTACK_API_KEY,
-    //     delivery_token: CONTENTSTACK_DELIVERY_TOKEN,
-    //     environment: CONTENTSTACK_ENVIRONMENT,
-    //   },
-    // },
+    {
+      resolve: "gatsby-source-contentstack",
+      options: {
+        api_key: CONTENTSTACK_API_KEY,
+        delivery_token: CONTENTSTACK_DELIVERY_TOKEN,
+        environment: CONTENTSTACK_ENVIRONMENT,
+      },
+    },
   ],
 };
