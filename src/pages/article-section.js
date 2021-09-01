@@ -10,12 +10,13 @@ const ArticleSection = ({ data }) => {
     <div className={frame}>
       <div className={articleSection}>
         <div className={grid}>
-        {data.allContentstackArticles.nodes.map((node)=>{
+        {data.allContentstackTPages.nodes[0].articlesection.map((node)=>{
           return(<Article
             key={node.id}
             category={node.category}
             title={node.title}
             text={node.text}
+            img_url={node.article_image.url}
           />);
         })}
         </div>

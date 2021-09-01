@@ -8,7 +8,7 @@ const Links = ({ data }) => {
     <div className={linkText}>
       <div className={linkItem}>
         <Link className={button} to={url}>
-          {button_text}
+          {button_text} <span>&#8594;</span>
         </Link>
       </div>
       <div className={linkItem}>

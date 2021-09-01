@@ -15,21 +15,22 @@ const IndexPage = ({ data }) => {
 export default IndexPage;
 export const query = graphql`
   query {
-    allContentstackTPages(filter: { title: { eq: "Newsletter sign-up" } }) {
+    allContentstackTPages(filter: {title: {eq: "Newsletter sign-up"}}) {
       nodes {
-        step_text
-        subheading
-        url
-        heading
+        articlesection {
+          article_image {
+            url
+          }
+          id
+          category
+          text
+          title
+        }
         button_text
-      }
-    }
-    allContentstackArticles {
-      nodes {
-        category
-        text
-        title
-        id
+        heading
+        subheading
+        step_text
+        url
       }
     }
   }
