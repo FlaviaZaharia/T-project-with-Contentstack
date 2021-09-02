@@ -1,6 +1,7 @@
 import * as React from "react";
-import { articleSection, grid, frame} from "./layout.module.css";
+import { articleSection, grid, frame,arrowVector } from "./layout.module.css";
 import Article from "./article";
+import vector from '../images/Vector.svg';
 const ArticleSection = ({ data }) => {
   return (
       <div className={frame}>
@@ -20,6 +21,7 @@ const ArticleSection = ({ data }) => {
           </div>
         </div>
       </div>
+      
   );
 };
 
