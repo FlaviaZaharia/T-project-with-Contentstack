@@ -9,9 +9,9 @@ import {
 } from "./layout.module.css";
 
 const Titles = ({ data }) => {
-  const step_text = data.allContentstackTPages.nodes[0].step_text;
-  const heading_text = data.allContentstackTPages.nodes[0].heading;
-  const subheading_text = data.allContentstackTPages.nodes[0].subheading;
+  const step_text = data&&data.allContentstackTPages.nodes[0].step_text;
+  const heading_text = data&&data.allContentstackTPages.nodes[0].heading;
+  const subheading_text = data&&data.allContentstackTPages.nodes[0].subheading;
   return (
     <div className={titles}>
       <div className={step}>

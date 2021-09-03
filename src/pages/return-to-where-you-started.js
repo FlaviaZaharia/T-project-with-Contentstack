@@ -14,10 +14,14 @@ import vector from "../images/Vector.svg";
 import group from "../images/Group.svg";
 import arrow from "../images/Group 647.svg";
 import smallarrow from "../images/Group 614.svg";
+import { Helmet } from "react-helmet";
 const ReturnToWhereYouStarted = ({ data }) => {
   const url = data.allContentstackTPages.nodes[0].url;
   return (
     <Layout>
+      <Helmet>
+        <title>Step4</title>
+      </Helmet>
       <div className={step4}>
         <Titles data={data} />
         <div className={link}>
