@@ -12,8 +12,8 @@ import {
 } from "./layout.module.css";
 import vector from "../images/Vector.svg";
 import group from "../images/Group.svg";
-import arrow from "../images/Group 647.svg"
-import smallarrow from"../images/Group 614.svg"
+import arrow from "../images/Group 647.svg";
+import smallarrow from "../images/Group 614.svg";
 const ReturnToWhereYouStarted = ({ data }) => {
   const url = data.allContentstackTPages.nodes[0].url;
   return (
@@ -24,18 +24,18 @@ const ReturnToWhereYouStarted = ({ data }) => {
           <Link className={returnTo} to={url}>
             Return to where you started
           </Link>
-          <img src={smallarrow} alt="smallarrow"/>
+          <img src={smallarrow} alt="smallarrow" />
         </div>
         <LongReads data={data} />
         <div className={arrowVector}>
           <img src={vector} alt="pic" />
         </div>
         <div className={step4Link}>
-        <img src={group} alt="arrow"/>
+          <img src={group} alt="arrow" />
           <Link className={returnTo} to={url}>
             Second to spare? Share your thoughts
           </Link>
-          <img src={arrow} alt="arrow"/>
+          <img src={arrow} alt="arrow" />
         </div>
       </div>
     </Layout>
