@@ -14,6 +14,7 @@ import vector from "../images/Vector.svg";
 import group from "../images/Group.svg";
 import arrow from "../images/Group 647.svg";
 import smallarrow from "../images/Group 614.svg";
+import blue from '../images/blue.svg'
 import { Helmet } from "react-helmet";
 const ReturnToWhereYouStarted = ({ data }) => {
   const url = data.allContentstackTPages.nodes[0].url;
@@ -23,6 +24,9 @@ const ReturnToWhereYouStarted = ({ data }) => {
         <title>Step4</title>
       </Helmet>
       <div className={step4}>
+      <div>
+        <img src={blue} alt="blue"/>
+      </div>
         <Titles data={data} />
         <div className={link}>
           <Link className={returnTo} to={url}>
