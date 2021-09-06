@@ -1,7 +1,7 @@
 import * as React from "react";
 import Layout from "./layout";
 import Titles from "./titles";
-import LongReads from "./longreads-section";
+import LongReads from './longreads'
 import { graphql } from "gatsby";
 import { step4, arrowVector } from "./layout.module.css";
 import vector from "../images/Vector.svg";
