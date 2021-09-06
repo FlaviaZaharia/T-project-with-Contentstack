@@ -4,13 +4,9 @@ import Titles from "./titles";
 import Links from "./links";
 import ArticleSection from "./article-section";
 import vector from '../images/Vector.svg';
-import blue from '../images/blue.svg'
 const Step1 = ({ data }) => {
   return (
     <div className={step1}>
-      <div>
-        <img src={blue} alt="blue"/>
-      </div>
       <Titles data={data} />
       <ArticleSection data={data} />
       <div className={arrowVector}>

@@ -5,7 +5,9 @@ import {
   articleChild,
   articleContent,
   titleSection,
+  linkToArticle
 } from "./layout.module.css";
+import { Link } from "gatsby";
 const ArticleLongReads = ({ title, text, img_url }) => {
   return (
     <div className={article}>
@@ -14,12 +16,15 @@ const ArticleLongReads = ({ title, text, img_url }) => {
           <img src={img_url} alt="article" />
         </div>
         <div className={articleContent}>
-          <div className={titleSection}>
-            <div>
-              <p>{title}</p>
+          <Link to="/" className={linkToArticle}>
+            <div className={titleSection}>
+              <div>
+                <p>{title}</p>
+              </div>
             </div>
-          </div>
-          <p>{text}</p>
+
+            <p>{text}</p>
+          </Link>
         </div>
       </div>
     </div>

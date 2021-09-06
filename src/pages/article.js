@@ -29,7 +29,7 @@ const Article = ({ category, title, text,img_url }) => {
               <p>{category}</p>
               <p>{title}</p>
             </div>
-
+            <div>
             <button
               className={add}
               id={click ? clicked : unclicked}
@@ -37,6 +37,7 @@ const Article = ({ category, title, text,img_url }) => {
             >
               {click ? <CheckIcon /> : "+"}
             </button>
+            </div>
           </div>
           <p>{text}</p>
         </div>

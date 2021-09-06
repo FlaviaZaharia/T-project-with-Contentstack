@@ -31,23 +31,26 @@
     url("//db.onlinewebfonts.com/t/294629fdbf28fa0a2d3e70432b07581b.svg#Austin News Deck Web Medium")
       format("svg");
 }
+body {
+  margin: 0;
+  padding: 0;
+}
 p {
   font-family: "Telesans-Text";
 }
-.heading,.subheading {
+.heading,
+.subheading {
   font-family: "Austin News Deck Web Medium";
 }
 /* HEADER  */
 
-body {
-  margin-bottom: 0;
-}
 .header {
   background: #ffffff;
-  padding-left: 20px;
+  padding: 10px 0px 5px 20px;
 }
-.header>img{
-  height:40px;
+
+.header > img {
+  height: 40px;
 }
 .layout {
   position: relative;
@@ -58,14 +61,12 @@ body {
 
 .layout > .footer {
   background: #f8f8f8;
-  margin-left: -8px;
-  margin-right: -8px;
-  padding: 10px;
   border-top: 1px solid #b5b5b5;
   position: absolute;
   bottom: 0;
   width: 100%;
   min-height: 2.5em;
+  font-family: "Telesans-Text";
 }
 
 .footer > p {
@@ -73,6 +74,7 @@ body {
   line-height: 16px;
   text-align: center;
   color: #333333;
+  padding: 10px; 
 }
 
 /*  STEP1  */
@@ -80,60 +82,59 @@ body {
 .step1 {
   position: relative;
   border: 1px #dddddd solid;
-  border-image: linear-gradient(to right, #1798e8 50%, #dddddd 50%); 
-  border-image-slice: 1;
-  border-width: 2px 0px 0px 0px; 
-  margin-left: -9px;
-  margin-right: -9px;
-  padding-bottom: 5em;
-}
-
- .step1>div:nth-child(1){
-  position:absolute;
-  left:49.6%;
-  top:-1.2%;
-} 
-.step1>div:nth-child(1)>img{
-  width:9px;
-}
- 
-.step4 {
-  position: relative;
-  border: 1px  #1798e8 solid;
-  /* border-image: linear-gradient(to right, #1798e8 99%, #dddddd 1%); */
+  border-image: linear-gradient(to right, #1798e8 50%, #dddddd 49.5%);
   border-image-slice: 1;
   border-width: 2px 0px 0px 0px;
-  margin-left: -8px;
-  margin-right: -8px;
+  padding-bottom: 5em;
 }
-.step4>div:nth-child(1){
+ .step1::before{
   position:absolute;
-  left:99.5%;
-  top:-1.5%;
-} 
-.step4>div:nth-child(1)>img{
-  width:9px;
-}
-
-/* .step4::before {
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  border-top: 1px solid #1798e8;
-  border-right: 1px solid #1798e8;
-  border-bottom: 0px #1798e8;
-  border-left: 0px #1798e8;
-  top: 0%;
-  right: 1%;
-  margin-left: -60px;
-  content: "";
+  content:"";
+  width:5px;
+  height:5px;
+  border:2px solid #1798e8;
+  border-left:2px solid transparent;
+  border-bottom:2px solid transparent;
   transform: rotate(45deg);
-  margin-top: -4px;
+  left:50%;
+  margin-top:-6.5px;
+  margin-left:-9px;
+}   
+
+.step4 {
+  position: relative;
+  border: 2px #1798e8 solid;
+  border-image: linear-gradient(to right, #1798e8 99.7%, #dddddd 0.3%);
+  border-image-slice: 1;  
+  border-width: 2px 0px 0px 0px;
+}
+ .step4::before{
+  position:absolute;
+  content:"";
+  width:5px;
+  height:5px;
+  border:2px solid #1798e8;
+  border-left:2px solid transparent;
+  border-bottom:2px solid transparent;
+  transform: rotate(45deg);
+  right:0.2%; 
+  margin-top:-6.5px; 
+  
+  
+} 
+/* .step4 > div:nth-child(1) {
+  position: absolute; 
+  right: 0%;
+  top: -1.5%; 
+}
+.step4 > div:nth-child(1) > img {
+  width: 9px;
 } */
+
 /* Titles section  */
 .titles {
   text-align: center;
-  margin: 20px;
+  margin: 20px 10px 20px 10px; 
 }
 .step {
   display: flex;
@@ -359,6 +360,7 @@ body {
   .titles .heading {
     font-size: 25px;
   }
+
 }
 @media (min-width: 600px) {
   .grid {
@@ -460,14 +462,14 @@ body {
     margin-right: 0px;
   }
   .step4-frame {
-    margin: 40px 200px;
+    margin: 40px 20px;
   }
 }
 
 @media (min-height: 1000px) {
   .step4 .heading {
     font-size: 50px;
-    margin-top: 100px;
+    margin-top: 150px;
   }
 }
 @media (min-width: 1200px) {
@@ -475,12 +477,12 @@ body {
     margin: 20px 150px;
   }
   .step4-frame {
-    margin: 40px 380px;
+    margin: 40px 280px;
   }
   .step4 .subheading {
-    margin-left: 420px;
-    margin-right: 420px;
-  }
+    margin-left: 400px;
+    margin-right: 400px;
+  } 
 }
 
 .article-image > img {
@@ -527,15 +529,19 @@ body {
   background: #fffddf;
   color: #767676;
   border: 1px solid #767676;
+  box-shadow: 0 2px #999;
+  transition: transform 0.2s;
 }
 
 #clicked {
   background: #dcf0fc;
   border: 1px solid #222222;
   color: #222222;
+  box-shadow: 0 2px #999;
 }
 #unclicked:hover {
   background: #fee43a;
+  transform: scale(1.1);
 }
 .title-section {
   display: flex;
@@ -553,7 +559,7 @@ body {
   font-size: 18px;
   line-height: 22px;
   margin: 5px 0px 5px 0px;
-  font-family: "Austin News Deck Web Medium"
+  font-family: "Austin News Deck Web Medium";
 }
 
 .heading {
@@ -612,7 +618,6 @@ body {
 .arrow-vector {
   display: flex;
   justify-content: center;
-  /* padding-left:0.5px; */
 }
 
 .step4-link {
@@ -635,3 +640,20 @@ body {
 .step4 {
   padding-bottom: 6em;
 }
+
+.step4 .article-content{
+  padding-left:10px;
+}
+
+.link-to-article{
+  text-decoration: none;
+  color:black;
+}
+
+.link-to-article>p{
+  font-family:"Telesans-Text";
+  margin-top:5px;
+  font-size:12px;
+}
+
+
