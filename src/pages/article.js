@@ -11,17 +11,17 @@ import {
   clicked,
 } from "./layout.module.css";
 import { useState } from "react";
-const Article = ({ category, title, text,img_url }) => {
+const Article = ({ category, title, text, img_url }) => {
   const [click, setClick] = useState(false);
 
   const handleClick = () => {
     setClick(!click);
   };
   return (
-    <div className={article}>
+    <article className={article}>
       <div className={articleChild}>
         <div className={articleImage}>
-          <img src={img_url} alt="article"/>
+          <img src={img_url} alt="article" />
         </div>
         <div className={articleContent}>
           <div className={titleSection}>
@@ -30,19 +30,19 @@ const Article = ({ category, title, text,img_url }) => {
               <p>{title}</p>
             </div>
             <div>
-            <button
-              className={add}
-              id={click ? clicked : unclicked}
-              onClick={handleClick}
-            >
-              {click ? <CheckIcon /> : "+"}
-            </button>
+              <button
+                className={add}
+                id={click ? clicked : unclicked}
+                onClick={handleClick}
+              >
+                {click ? <CheckIcon /> : "+"}
+              </button>
             </div>
           </div>
           <p>{text}</p>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

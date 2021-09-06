@@ -1,34 +1,24 @@
 import * as React from "react";
-import {
-  titles,
-  heading,
-  step,
-  subheading,
-  lines,
-  middleLine,
-} from "./layout.module.css";
-
+import { titles, heading, subheading } from "./layout.module.css";
+import StepTextDecoration from "./step-text-decoration";
 const Titles = ({ data }) => {
-  const step_text = data&&data.allContentstackTPages.nodes[0].step_text&&data.allContentstackTPages.nodes[0].step_text;
-  const heading_text = data&&data.allContentstackTPages.nodes[0].heading&&data.allContentstackTPages.nodes[0].heading;
-  const subheading_text = data&&data.allContentstackTPages.nodes[0].subheading&&data.allContentstackTPages.nodes[0].subheading;
+  const step_text =
+    data &&
+    data.allContentstackTPages.nodes[0].step_text &&
+    data.allContentstackTPages.nodes[0].step_text;
+  const heading_text =
+    data &&
+    data.allContentstackTPages.nodes[0].heading &&
+    data.allContentstackTPages.nodes[0].heading;
+  const subheading_text =
+    data &&
+    data.allContentstackTPages.nodes[0].subheading &&
+    data.allContentstackTPages.nodes[0].subheading;
   return (
     <div className={titles}>
-      <div className={step}>
-        <div className={lines}>
-          <div></div>
-          <div className={middleLine}></div>
-          <div></div>
-        </div>
-        <span>{step_text}</span>
-        <div className={lines}>
-          <div></div>
-          <div className={middleLine}></div>
-          <div></div>
-        </div>
-      </div>
-      <p className={heading}>{heading_text}</p>
-      <p className={subheading}>{subheading_text}</p>
+      <StepTextDecoration>{step_text}</StepTextDecoration>
+      <h1 className={heading}>{heading_text}</h1>
+      <h2 className={subheading}>{subheading_text}</h2>
     </div>
   );
 };

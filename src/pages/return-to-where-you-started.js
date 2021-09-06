@@ -1,20 +1,13 @@
 import * as React from "react";
 import Layout from "./layout";
 import Titles from "./titles";
-import LongReads from "./longreads";
-import { graphql, Link } from "gatsby";
-import {
-  step4,
-  returnTo,
-  link,
-  arrowVector,
-  step4Link,
-} from "./layout.module.css";
+import LongReads from "./longreads-section";
+import { graphql } from "gatsby";
+import { step4, arrowVector } from "./layout.module.css";
 import vector from "../images/Vector.svg";
-import group from "../images/Group.svg";
-import arrow from "../images/Group 647.svg";
-import smallarrow from "../images/Group 614.svg";
 import { Helmet } from "react-helmet";
+import FullArrowWithText from "./full-arrow-with-text";
+import TextArrow from "./textarrow";
 const ReturnToWhereYouStarted = ({ data }) => {
   const url = data.allContentstackTPages.nodes[0].url;
   return (
@@ -23,25 +16,15 @@ const ReturnToWhereYouStarted = ({ data }) => {
         <title>Step4</title>
       </Helmet>
       <div className={step4}>
-
         <Titles data={data} />
-        <div className={link}>
-          <Link className={returnTo} to={url}>
-            Return to where you started
-          </Link>
-          <img src={smallarrow} alt="smallarrow" />
-        </div>
+        <TextArrow url={url}> Return to where you started</TextArrow>
         <LongReads data={data} />
         <div className={arrowVector}>
-          <img src={vector} alt="pic" />
+          <img src={vector} alt="" />
         </div>
-        <div className={step4Link}>
-          <img src={group} alt="arrow" />
-          <Link className={returnTo} to={url}>
-            Second to spare? Share your thoughts
-          </Link>
-          <img src={arrow} alt="arrow" />
-        </div>
+        <FullArrowWithText url={url}>
+          Second to spare? Share your thoughts
+        </FullArrowWithText>
       </div>
     </Layout>
   );

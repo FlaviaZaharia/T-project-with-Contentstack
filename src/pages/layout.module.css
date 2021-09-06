@@ -316,10 +316,10 @@ p {
   .grid-step4 {
     grid-template-columns: 1fr;
   }
-  .grid > div:nth-last-child(1) {
+  .grid > article:nth-last-child(1) {
     border-bottom: 0px;
   }
-  .grid-step4 > div:nth-last-child(1) {
+  .grid-step4 > article:nth-last-child(1) {
     border-bottom: 0px;
   }
 
@@ -367,12 +367,12 @@ p {
   .grid-step4 {
     grid-template-columns: 1fr 1fr;
   }
-  .grid > div:nth-child(2n + 1):nth-last-child(-n + 2),
-  .grid > div:nth-child(2n + 1):nth-last-child(-n + 2) ~ div {
+  .grid > article:nth-child(2n + 1):nth-last-child(-n + 2),
+  .grid > article:nth-child(2n + 1):nth-last-child(-n + 2) ~ article {
     border-bottom: 0px;
   }
-  .grid-step4 > div:nth-child(2n + 1):nth-last-child(-n + 2),
-  .grid-step4 > div:nth-child(2n + 1):nth-last-child(-n + 2) ~ div {
+  .grid-step4 > article:nth-child(2n + 1):nth-last-child(-n + 2),
+  .grid-step4 > article:nth-child(2n + 1):nth-last-child(-n + 2) ~ article {
     border-bottom: 0px;
   }
   .articleSection {
@@ -425,8 +425,8 @@ p {
   .grid-step4 {
     grid-template-columns: 1fr 1fr;
   }
-  .grid > div:nth-child(3n + 1):nth-last-child(-n + 3),
-  .grid > div:nth-child(3n + 1):nth-last-child(-n + 3) ~ div {
+  .grid > article:nth-child(3n + 1):nth-last-child(-n + 3),
+  .grid > article:nth-child(3n + 1):nth-last-child(-n + 3) ~ article {
     border-bottom: 0px;
   }
   .frame {
@@ -648,28 +648,23 @@ p {
   color: black;
 }
 
-.link-to-article .title-section p{
+.link-to-article .title-section p {
   font-family: "Austin News Deck Web Medium";
-  font-size:18px;
-  margin-bottom:5px;
-  
+  font-size: 18px;
+  margin-bottom: 5px;
 }
-.link-to-article  p {
+.link-to-article p {
   font-family: "Telesans-Text";
   margin-top: 5px;
   font-size: 12px;
-  
 }
 
-
-
-#normal{
-color:#222222;
-text-decoration: none;
+#normal {
+  color: #222222;
+  text-decoration: none;
 }
 
-#hovered{
-color:#1798e8;
-text-decoration: underline;
+#hovered {
+  color: #1798e8;
+  text-decoration: underline;
 }
-
