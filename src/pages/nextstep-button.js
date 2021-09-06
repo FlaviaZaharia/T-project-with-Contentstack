@@ -4,7 +4,7 @@ import { Link} from "gatsby";
 const NextStepButton=({button_text,img_src,url})=>{
     return(<div className={linkItem}>
         <Link className={button} to={url}>
-          {button_text} <img src={img_src} alt="smallarrow"/>
+          {button_text} <img src={img_src} alt=""/>
         </Link>
       </div>);
 }
