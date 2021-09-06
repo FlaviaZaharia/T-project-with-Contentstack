@@ -74,7 +74,7 @@ p {
   line-height: 16px;
   text-align: center;
   color: #333333;
-  padding: 10px; 
+  padding: 10px;
 }
 
 /*  STEP1  */
@@ -87,41 +87,39 @@ p {
   border-width: 2px 0px 0px 0px;
   padding-bottom: 5em;
 }
- .step1::before{
-  position:absolute;
-  content:"";
-  width:5px;
-  height:5px;
-  border:2px solid #1798e8;
-  border-left:2px solid transparent;
-  border-bottom:2px solid transparent;
+.step1::before {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  border: 2px solid #1798e8;
+  border-left: 2px solid transparent;
+  border-bottom: 2px solid transparent;
   transform: rotate(45deg);
-  left:50%;
-  margin-top:-6.5px;
-  margin-left:-9px;
-}   
+  left: 50%;
+  margin-top: -6.5px;
+  margin-left: -9px;
+}
 
 .step4 {
   position: relative;
   border: 2px #1798e8 solid;
   border-image: linear-gradient(to right, #1798e8 99.7%, #dddddd 0.3%);
-  border-image-slice: 1;  
+  border-image-slice: 1;
   border-width: 2px 0px 0px 0px;
 }
- .step4::before{
-  position:absolute;
-  content:"";
-  width:5px;
-  height:5px;
-  border:2px solid #1798e8;
-  border-left:2px solid transparent;
-  border-bottom:2px solid transparent;
+.step4::before {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  border: 2px solid #1798e8;
+  border-left: 2px solid transparent;
+  border-bottom: 2px solid transparent;
   transform: rotate(45deg);
-  right:0.2%; 
-  margin-top:-6.5px; 
-  
-  
-} 
+  right: 0.2%;
+  margin-top: -6.5px;
+}
 /* .step4 > div:nth-child(1) {
   position: absolute; 
   right: 0%;
@@ -134,7 +132,7 @@ p {
 /* Titles section  */
 .titles {
   text-align: center;
-  margin: 20px 10px 20px 10px; 
+  margin: 20px 10px 20px 10px;
 }
 .step {
   display: flex;
@@ -360,7 +358,6 @@ p {
   .titles .heading {
     font-size: 25px;
   }
-
 }
 @media (min-width: 600px) {
   .grid {
@@ -482,7 +479,7 @@ p {
   .step4 .subheading {
     margin-left: 400px;
     margin-right: 400px;
-  } 
+  }
 }
 
 .article-image > img {
@@ -627,8 +624,9 @@ p {
 }
 
 .step4-link .return-to {
-  margin: 0px 10px 0px 10px;
+  margin: 5px 10px 5px 10px;
   font-family: "Telesans-Text";
+  justify-items: center;
 }
 
 .step4-link #blue-arrow {
@@ -641,19 +639,37 @@ p {
   padding-bottom: 6em;
 }
 
-.step4 .article-content{
-  padding-left:10px;
+.step4 .article-content {
+  padding-left: 10px;
 }
 
-.link-to-article{
+.link-to-article {
   text-decoration: none;
-  color:black;
+  color: black;
 }
 
-.link-to-article>p{
-  font-family:"Telesans-Text";
-  margin-top:5px;
-  font-size:12px;
+.link-to-article .title-section p{
+  font-family: "Austin News Deck Web Medium";
+  font-size:18px;
+  margin-bottom:5px;
+  
+}
+.link-to-article  p {
+  font-family: "Telesans-Text";
+  margin-top: 5px;
+  font-size: 12px;
+  
 }
 
+
+
+#normal{
+color:#222222;
+text-decoration: none;
+}
+
+#hovered{
+color:#1798e8;
+text-decoration: underline;
+}
 

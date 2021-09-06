@@ -5,10 +5,14 @@ import {
   articleChild,
   articleContent,
   titleSection,
-  linkToArticle
+  linkToArticle,
+  normal,
+  hovered
 } from "./layout.module.css";
 import { Link } from "gatsby";
+import { useState } from "react";
 const ArticleLongReads = ({ title, text, img_url }) => {
+  const [hover,setHover]=useState(false);
   return (
     <div className={article}>
       <div className={articleChild}>
@@ -16,14 +20,13 @@ const ArticleLongReads = ({ title, text, img_url }) => {
           <img src={img_url} alt="article" />
         </div>
         <div className={articleContent}>
-          <Link to="/" className={linkToArticle}>
-            <div className={titleSection}>
-              <div>
-                <p>{title}</p>
+          <Link to="/" className={linkToArticle} onMouseOver={()=>setHover(true)} onMouseOut={()=>setHover(false)}>
+            <div>
+              <div className={titleSection}>
+                  <p id={hover?hovered:normal}>{title}</p>
               </div>
+              <p>{text}</p>
             </div>
-
-            <p>{text}</p>
           </Link>
         </div>
       </div>
