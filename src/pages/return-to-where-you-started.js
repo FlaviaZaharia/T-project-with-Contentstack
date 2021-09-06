@@ -9,7 +9,8 @@ import { Helmet } from "react-helmet";
 import FullArrowWithText from "./full-arrow-with-text";
 import TextArrow from "./textarrow";
 const ReturnToWhereYouStarted = ({ data }) => {
-  const url = data.allContentstackTPages.nodes[0].url;
+  const url = data&&data.allContentstackTPages.nodes[0].url;
+  const button_text=data&&data.allContentstackTPages.nodes[0].button_text;
   return (
     <Layout>
       <Helmet>
@@ -23,7 +24,7 @@ const ReturnToWhereYouStarted = ({ data }) => {
           <img src={vector} alt="" />
         </div>
         <FullArrowWithText url={url}>
-          Second to spare? Share your thoughts
+          {button_text}
         </FullArrowWithText>
       </div>
     </Layout>
