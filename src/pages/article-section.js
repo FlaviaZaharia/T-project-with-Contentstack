@@ -6,7 +6,7 @@ const ArticleSection = ({ data }) => {
       <div className={frame}>
         <div className={articleSection}>
           <div className={grid}>
-            {data.allContentstackTPages.nodes[0].articlesection&&data.allContentstackTPages.nodes[0].articlesection.map((node) => {
+            {data&&data.allContentstackTPages.nodes[0].articlesection&&data.allContentstackTPages.nodes[0].articlesection.map((node) => {
               return (
                 <Article
                   key={node.id}
