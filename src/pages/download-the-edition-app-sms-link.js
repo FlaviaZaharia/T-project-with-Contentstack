@@ -1,15 +1,25 @@
 import * as React from "react";
 import Layout from "./layout";
 import Titles from "./titles";
-import InputField from './input-field'
+import InputField from "./input-field";
 import DigitalSection from "./digitalsection";
 import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
-import { step3, linkItem, skip, linkText,arrowVector } from "./layout.module.css";
-import vector from '../images/Vector.svg'
+import {
+  step3,
+  linkItem,
+  skip,
+  linkText,
+  arrowVector,
+} from "./layout.module.css";
+import vector from "../images/Vector.svg";
 const DownloadTheEdition = ({ data }) => {
-  const url = data&&data.allContentstackTPages.nodes[0].url&&data.allContentstackTPages.nodes[0].url;
-  const digitalData=data&&data.allContentstackDigitalResourcesSection.nodes[0];
+  const url =
+    data &&
+    data.allContentstackTPages.nodes[0].url &&
+    data.allContentstackTPages.nodes[0].url;
+  const digitalData =
+    data && data.allContentstackDigitalResourcesSection.nodes[0];
   return (
     <Layout>
       <Helmet>
@@ -18,7 +28,7 @@ const DownloadTheEdition = ({ data }) => {
       <div className={step3}>
         <Titles data={data} />
         <DigitalSection digitalData={digitalData}>
-          <InputField/>
+          <InputField url={url} />
         </DigitalSection>
         <div className={arrowVector}>
           <img src={vector} alt="" />
@@ -50,16 +60,16 @@ export const query = graphql`
       }
     }
     allContentstackDigitalResourcesSection(
-        filter: {title: {eq: "Download the Edition App SMS link"}}
-      ) {
-        nodes {
-          call_to_action
-          data_privacy
-          description
-          image {
-            url
-          }
+      filter: { title: { eq: "Download the Edition App SMS link" } }
+    ) {
+      nodes {
+        call_to_action
+        data_privacy
+        description
+        image {
+          url
         }
       }
+    }
   }
 `;

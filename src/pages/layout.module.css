@@ -836,15 +836,14 @@ p {
 .input input:focus {
   border: 1px solid #1798e8;
   background: #dce4f9;
-  outline:none;
+  outline: none;
 }
 #error-border {
   border: 1px solid #de0000;
   background: #ffc0c0;
 }
 
-#correct{
-  
+#correct {
 }
 
 label {
@@ -859,7 +858,12 @@ label {
   font-family: "Telesans-Text";
   text-align: center;
 }
-
+.success-message {
+  color: #1798e8;
+  margin: 10px;
+  font-family: "Telesans-Text";
+  text-align: center;
+}
 .input > div:nth-child(1) {
   display: flex;
   flex-direction: column;

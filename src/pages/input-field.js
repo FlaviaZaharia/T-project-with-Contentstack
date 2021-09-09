@@ -6,11 +6,13 @@ import {
   errorMessage,
   errorBorder,
   correct,
+  successMessage,
 } from "./layout.module.css";
 import validator from "validator";
-const InputField = () => {
+const InputField = ({ url }) => {
   const [number, setNumber] = useState("");
   const [error, setError] = useState("");
+  const [message, setMessage] = useState("");
   const validatePhoneNumber = (e) => {
     e.preventDefault();
     const isValidPhoneNumber = validator.isMobilePhone(number, ["en-GB"]);
@@ -18,10 +20,20 @@ const InputField = () => {
       setError(
         "The number you have entered is not a valid UK phone number. Please try again."
       );
+    else {
+      setMessage("Message sent");
+      setTimeout(() => {
+        setMessage("");
+      }, 3000);
+      window.setTimeout(() => {
+        window.location.href = `${url}`;
+      }, 3000);
+    }
   };
 
   const handleChange = (e) => {
     setError("");
+    setMessage("");
     setNumber(e.target.value);
   };
   return (
@@ -48,6 +60,7 @@ const InputField = () => {
         </div>
       </form>
       {error && <div className={errorMessage}>{error}</div>}
+      {message && <div className={successMessage}>{message}</div>}
     </div>
   );
 };
