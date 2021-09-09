@@ -8,8 +8,9 @@ import { graphql } from "gatsby";
 import { step3,arrowVector} from "./layout.module.css";
 import vector from '../images/Vector.svg'
 import CallToAction from "./call-to-action";
+import Alternatives from './alternatives'
 const JoinWhatsAppGroup = ({ data }) => {
-  const digitalData = data.allContentstackDigitalResourcesSection.nodes[0];
+  const digitalData = data&&data.allContentstackDigitalResourcesSection.nodes[0];
   return (
     <Layout>
       <Helmet>
@@ -17,7 +18,7 @@ const JoinWhatsAppGroup = ({ data }) => {
       </Helmet>
       <div className={step3} >
         <Titles data={data} />
-        <DigitalSection digitalData={digitalData}>
+        <DigitalSection digitalData={digitalData} comp={<Alternatives/>}>
           <CallToAction call={digitalData.call_to_action}/>
         </DigitalSection>
         <div className={arrowVector}>

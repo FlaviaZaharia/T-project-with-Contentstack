@@ -1,22 +1,25 @@
 import * as React from "react";
 import Layout from "./layout";
 import Titles from "./titles";
+import InputField from './input-field'
 import DigitalSection from "./digitalsection";
 import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
-import { step2, linkItem, skip, linkText,arrowVector } from "./layout.module.css";
+import { step3, linkItem, skip, linkText,arrowVector } from "./layout.module.css";
 import vector from '../images/Vector.svg'
 const DownloadTheEdition = ({ data }) => {
-  const url = data.allContentstackTPages.nodes[0].url;
-  const digitalData=data.allContentstackDigitalResourcesSection.nodes[0];
+  const url = data&&data.allContentstackTPages.nodes[0].url&&data.allContentstackTPages.nodes[0].url;
+  const digitalData=data&&data.allContentstackDigitalResourcesSection.nodes[0];
   return (
     <Layout>
       <Helmet>
         <title>Step2</title>
       </Helmet>
-      <div className={step2}>
+      <div className={step3}>
         <Titles data={data} />
-        <DigitalSection digitalData={digitalData}/>
+        <DigitalSection digitalData={digitalData}>
+          <InputField/>
+        </DigitalSection>
         <div className={arrowVector}>
           <img src={vector} alt="" />
         </div>

@@ -7,20 +7,21 @@ import {
   dataPrivacy,
   description,
 } from "./layout.module.css";
-const DigitalSection = ({ digitalData, children }) => {
+const DigitalSection = ({ digitalData,comp, children }) => {
   return (
     <section className={frame}>
       <div className={articleSection}>
         <img
           className={mainImage}
-          src={digitalData.image.url}
+          src={digitalData&&digitalData.image.url}
           alt="main_photo"
         />
         <div className={content}>
-          <p className={description}>{digitalData.description}</p>
+          <p className={description}>{digitalData&&digitalData.description}</p>
           {children}
-          <p className={dataPrivacy}>{digitalData.data_privacy}</p>
+          <p className={dataPrivacy}>{digitalData&&digitalData.data_privacy}</p>
         </div>
+        {comp}
       </div>
     </section>
   );
