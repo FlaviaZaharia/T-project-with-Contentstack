@@ -49,6 +49,7 @@ const InputField = ({ url }) => {
               placeholder="Your mobile number"
               value={number}
               onChange={handleChange}
+              autoComplete="off"
               required
             />
           </div>
